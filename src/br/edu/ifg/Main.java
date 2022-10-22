@@ -8,7 +8,10 @@ public class Main {
 		System.out.println( campeonato.getTipoCampeonato());
 		System.out.println( campeonato.getQuantTotalRodadas());
 		
-		Time time1 = new Time("Sao Paulo", null, "Morumbi");
+		Jogador[] teste1 = new Jogador[1];
+		teste1[0] = new Jogador("Rodinei","Lateral-Esquerdo","Sao Paulo");
+		
+		Time time1 = new Time("Sao Paulo", teste1, "Morumbi");
 		Time time2 = new Time("Santos", null, "Vila");
 		Jogo jogo = new Jogo(time1, time2);
 		jogo.definirGanhador();
@@ -17,6 +20,7 @@ public class Main {
 		System.out.println(jogo.getVencedor());
 		System.out.println(jogo.getGolsTimeCasa());
 		System.out.println(jogo.getGolsTimeVisitante());
+		time1.exibirEscalacao();
 		
 		}
 

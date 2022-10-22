@@ -1,4 +1,5 @@
 package br.edu.ifg;
+import java.util.Arrays;
 
 public class Time {
 	private String nomeTime;
@@ -59,8 +60,17 @@ public class Time {
 	
 	public void exibirEscalacao() {
 		//Implementar a regra de negocio ainda
+		for (Jogador jogador : this.jogadores) {
+			System.out.println("Nome: " + jogador.getNome()+ " Funcao: "+ jogador.getFuncao() + " Time: "+jogador.getTimeEmQueJoga());
+		}
 	}
 	
+	public void calcularPontuacao() {
+		int pontuacao;
+		pontuacao = (this.getNumVitoria() * 3) + this.getNumEmpate();
+		this.setPontuacaoTimeCampeonato(pontuacao);
+	}
+
 	/*
 	 * Inicio dos metodos gets e setters
 	 */
