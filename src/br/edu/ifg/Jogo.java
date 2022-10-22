@@ -1,5 +1,6 @@
 package br.edu.ifg;
 import java.util.Calendar;
+import java.util.Random;
 
 public class Jogo {
 	private Time timeCasa;
@@ -14,6 +15,79 @@ public class Jogo {
 	public Jogo(Time timeCasa,Time timeVisitante) {
 		this.timeCasa = timeCasa;
 		this.timeVisitante = timeVisitante;
+	}
+	
+	public void definirGanhador() {
+		Random aleatorio = new Random();
+		int num = aleatorio.nextInt(3);
+		Time timeC = this.getTimeCasa();
+		Time timeV = this.getTimeVisitante();
+		if(num == 0) {
+			String venc = timeC.getNomeTime();
+			this.setVencedor(venc);
+			timeC.somarVitoria();
+			timeV.somarDerrota();	
+		} else if(num == 1) {
+			String venc = timeV.getNomeTime();
+			this.setVencedor(venc);
+			timeC.somarDerrota();
+			timeV.somarVitoria();
+		} else {
+			String venc = "Empate";
+			this.setVencedor(venc);
+			timeC.somarEmpate();
+			timeV.somarEmpate();
+		}
+		this.gerarResultado();
+		this.setTimeCasa(timeC);
+		this.setTimeVisitante(timeV);
+	}
+	
+	public void gerarResultado() {
+		Time timeC = this.getTimeCasa();
+		Time timeV = this.getTimeVisitante();
+		int numGolsC;
+		int numGolsV;
+		Random num = new Random();
+		if(timeC.getNomeTime() == this.getVencedor()) {
+			numGolsC = num.nextInt(6);
+			while(numGolsC < 1) {
+				numGolsC = num.nextInt(6);
+			}
+			numGolsV = num.nextInt(5);
+			while (numGolsV >= numGolsC) {
+				numGolsV = num.nextInt(5);
+			}
+			this.setGolsTimeCasa(numGolsC);
+			this.setGolsTimeVisitante(numGolsV);
+			timeC.somarGolsFeitos(this.getGolsTimeCasa());
+			timeV.somarGolsFeitos(this.getGolsTimeVisitante());
+			timeC.somarGolsTomados(this.getGolsTimeVisitante());
+			timeV.somarGolsTomados(this.getGolsTimeCasa());
+		}else if(timeV.getNomeTime() == this.getVencedor()) {
+			numGolsV = num.nextInt(5);
+			while(numGolsV < 1) {
+				numGolsV = num.nextInt(5);
+			}
+			numGolsC = num.nextInt(4);
+			while (numGolsC >= numGolsV) {
+				numGolsC = num.nextInt(4);
+			}
+			this.setGolsTimeCasa(numGolsC);
+			this.setGolsTimeVisitante(numGolsV);
+			timeC.somarGolsFeitos(this.getGolsTimeCasa());
+			timeV.somarGolsFeitos(this.getGolsTimeVisitante());
+			timeC.somarGolsTomados(this.getGolsTimeVisitante());
+			timeV.somarGolsTomados(this.getGolsTimeCasa());
+		} else {
+			int numGols = num.nextInt(5);
+			this.setGolsTimeCasa(numGols);
+			this.setGolsTimeVisitante(numGols);
+			timeC.somarGolsFeitos(this.getGolsTimeCasa());
+			timeV.somarGolsFeitos(this.getGolsTimeVisitante());
+			timeC.somarGolsTomados(this.getGolsTimeVisitante());
+			timeV.somarGolsTomados(this.getGolsTimeCasa());
+		}
 	}
 
 	public Time getTimeCasa() {
@@ -79,6 +153,4 @@ public class Jogo {
 	public void setLocal(String local) {
 		this.local = local;
 	}
-	
-	
 }

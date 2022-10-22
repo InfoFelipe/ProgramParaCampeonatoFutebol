@@ -4,16 +4,28 @@ public class Campeonato {
 	private int quantTotalRodadas;
 	private int numTotalEquipes;
 	private String vencedorDoCampeonato;
-	//Estudar como funciona o enum ainda
+	private TipoCampeonato tipoDoCampeonato;
+	private String tipoCampeonato;
 	
-	//public enum tipoDoCampeonato{
-		//A('Primeira Divisao'), B('Sengunda Divisao'), C('Estadual');
-		
-		//public void tipoCampeonato
-	//}
-	
-	public Campeonato(int numTotalEquipes) {
+	public Campeonato(int numTotalEquipes,String tipoDoCampeonato) {
 		this.numTotalEquipes = numTotalEquipes;
+		this.tipoDoCampeonato = TipoCampeonato.valueOf(tipoDoCampeonato);
+		this.calcularNumRodadas();
+		this.tipoCampeonato();	
+	}
+	
+	public void tipoCampeonato() {
+		switch (tipoDoCampeonato) {
+			case PRIMEIRA_DIVISAO:
+				this.tipoCampeonato = "Primiera Divisao";
+				break;
+			case SEGUNDA_DIVISAO:
+				this.tipoCampeonato = "Segunda Divisao";
+				break;
+			case ESTADUAL:
+				this.tipoCampeonato = "Estadual";
+				break;
+		}
 	}
 	
 	public void calcularNumRodadas() {
@@ -44,5 +56,22 @@ public class Campeonato {
 	public void setVencedorDoCampeonato(String vencedorDoCampeonato) {
 		this.vencedorDoCampeonato = vencedorDoCampeonato;
 	}
+
+	public TipoCampeonato getTipoDoCampeonato() {
+		return tipoDoCampeonato;
+	}
+
+	public void setTipoDoCampeonato(TipoCampeonato tipoDoCampeonato) {
+		this.tipoDoCampeonato = tipoDoCampeonato;
+	}
+
+	public String getTipoCampeonato() {
+		return tipoCampeonato;
+	}
+
+	public void setTipoCampeonato(String tipoCampeonato) {
+		this.tipoCampeonato = tipoCampeonato;
+	}
+	
 	 
 }
