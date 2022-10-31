@@ -24,6 +24,4 @@ public class Pessoa {
 	public void setFuncao(String funcao) {
 		this.funcao = funcao;
 	}
-	
-	
 }

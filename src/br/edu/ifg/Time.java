@@ -1,5 +1,5 @@
 package br.edu.ifg;
-import java.util.Arrays;
+import java.util.Random;
 
 public class Time {
 	private String nomeTime;
@@ -60,8 +60,63 @@ public class Time {
 	
 	public void exibirEscalacao() {
 		//Implementar a regra de negocio ainda
-		for (Jogador jogador : this.jogadores) {
-			System.out.println("Nome: " + jogador.getNome()+ " Funcao: "+ jogador.getFuncao() + " Time: "+jogador.getTimeEmQueJoga());
+		int count = 0;
+		Random aleatorio = new Random();
+		for (int i = 0; i < this.jogadores.length; i++) {
+			if(count == 22) {
+				break;
+			}
+			int num = aleatorio.nextInt(3);
+			if((num < 2  && count == 0) && jogadores[i].getTipoJogador() ==  "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 0) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 2) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 2) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 4) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 4) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 6) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 6) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 8) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 8) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 10) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 10) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 12) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 12) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 14) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 14) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 16) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 16) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 18) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 18) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 20) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 20) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}else if((num < 2 && count == 22) && jogadores[i].getTipoJogador() == "Importante") {
+				System.out.println(jogadores[i].getNome()+" Funcao: " +jogadores[i].getFuncao());
+			}else if((num == 2 && count == 22) && jogadores[i+1].getTipoJogador() ==  "Rotativo") {
+				System.out.println(jogadores[i+1].getNome()+" Funcao: " +jogadores[i+1].getFuncao());
+			}
+			count++;
 		}
 	}
 	
@@ -153,4 +208,5 @@ public class Time {
 	public void setNumEmpate(int numEmpate) {
 		this.numEmpate = numEmpate;
 	}
+
 }
