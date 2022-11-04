@@ -1,6 +1,5 @@
 package br.edu.ifg;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -9,13 +8,15 @@ import java.util.Map;
 public class Campeonato {
 	private int quantTotalRodadas;
 	private int numTotalEquipes;
+	private Map<String, Time> times = new HashMap<String,Time>();
 	private String vencedorDoCampeonato;
 	private TipoCampeonato tipoDoCampeonato;
 	private String tipoCampeonato;
 	
-	public Campeonato(int numTotalEquipes,String tipoDoCampeonato) {
+	public Campeonato(int numTotalEquipes,String tipoDoCampeonato, Map<String, Time> times) {
 		this.numTotalEquipes = numTotalEquipes;
 		this.tipoDoCampeonato = TipoCampeonato.valueOf(tipoDoCampeonato);
+		this.times = times;
 		this.calcularNumRodadas();
 		this.tipoCampeonato();	
 	}
@@ -171,5 +172,15 @@ public class Campeonato {
 
 	public void setTipoCampeonato(String tipoCampeonato) {
 		this.tipoCampeonato = tipoCampeonato;
+	}
+
+	public Map<String, Time> getTimes() {
+		return times;
+	}
+
+	public void setTimes(Map<String, Time> times) {
+		this.times = times;
 	} 
+	
+	
 }

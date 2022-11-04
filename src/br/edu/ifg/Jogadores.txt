@@ -1,0 +1,4 @@
+Pedro Gabriel,Zagueiro,Sao Paulo,IMPORTANTE
+Felipe Antonio,Goleiro,Sao Paulo,Importante
+Luis Fernando,Meio de Campo,Sao paulo,Rotativo
+Davi Ian Moreira,Atacante,Palmeiras,Importante

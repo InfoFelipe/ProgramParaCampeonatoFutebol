@@ -1,77 +1,126 @@
 package br.edu.ifg;
-import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		//String time;
+		String tipoCampeonato;
 		Campeonato campeonato;
-		System.out.println("Digite qual time desseja adicionar jogadores: ");
-		//time = sc.next();
-		campeonato = new Campeonato(6,"PRIMEIRA_DIVISAO");
-		campeonato.calcularNumRodadas();
-		System.out.println( campeonato.getTipoCampeonato());
-		System.out.println( campeonato.getQuantTotalRodadas());
+		String path;
+		String opcao;
+		int numquipes;
+		int i = 1;
 		
-		Jogador[] teste1 = new Jogador[22];
-		Time santos = new Time("Santos", null, "Vila");
-		Time saoPaulo = new Time("Sao Paulo", null, "Morumbi");
-		Time flamengo = new Time("Flamengo",null,"Maracana");
-		Time vasco = new Time("Vasco", null,"sadia");
-		Time palmeira = new Time("Palmeira",null,"Allianz Arena");
-		Time vitoria =  new Time("Vitoria", null,"Sao Januario");
-		ArrayList<Time> timeArray = new ArrayList<Time>();
-	 	timeArray.add(santos);
-	 	timeArray.add(saoPaulo);
-		timeArray.add(palmeira);
-		timeArray.add(vasco);
-		timeArray.add(flamengo);
-		timeArray.add(vitoria);
-		/*
-		Jogo jogo = new Jogo(timeArray.get(4),timeArray.get(1));
-		
-		for (Time time : timeArray) {
+		path = "C:\\Users\\pedrp\\OneDrive\\Área de Trabalho\\Java\\Campeonato\\src\\br\\edu\\ifg\\jogadores.txt";
+		do {
+			Map<String, Time> times = new HashMap<String,Time>();
+			System.out.println("Qual campeonato quer criar primeiro:\nPrimeira Divisao, Segunda Divisao ou Estadual");
+			tipoCampeonato = sc.nextLine();
+			tipoCampeonato = tipoCampeonato.toUpperCase();
+			System.out.println(tipoCampeonato);
 			
-			jogo.definirGanhador();
-		}
-		System.out.println("A pontuacao do "+timeArray.get(4).getNomeTime()+ " foi de: "+timeArray.get(4).getPontuacaoTimeCampeonato());
-		System.out.println("Saldo de Gols do " +timeArray.get(4).getNomeTime()+ " foi de: "+ timeArray.get(4).getSaldoDeGols());
-		System.out.println("A pontuacao do "+timeArray.get(1).getNomeTime()+" foi de: "+timeArray.get(1).getPontuacaoTimeCampeonato());
-		System.out.println("Saldo de Gols do"+timeArray.get(1).getNomeTime()+" foi de: "+ timeArray.get(1).getSaldoDeGols());
-		*/
-		campeonato.definirCalendarioDePartidas(timeArray);
-		//campeonato.exibirTabela(timeArray);
+			System.out.println("Qualtas equipes vai ter: OBS Tem que ser um numero par");
+			numquipes = sc.nextInt();
+			clearBuffer(sc);
+			
+			while(numquipes%2 != 0) {
+				System.out.println("Digite o numero de equipes par:");
+				numquipes = sc.nextInt();
+				clearBuffer(sc);
+			}
+			
+			while(i <= numquipes) {
+				Map<String,Jogador> jogadores = new HashMap<String,Jogador>();
+				String nomeDoTime;
+				String nomeDoEstadio;
+				System.out.println("Digite o nome do " + i+" time");
+				nomeDoTime = sc.nextLine();
+				nomeDoTime = nomeDoTime.toUpperCase();
+				
+				System.out.println("Digite agora o nome do Estadio desse time:");
+				nomeDoEstadio = sc.nextLine();
+				nomeDoEstadio = nomeDoEstadio.toUpperCase();
+
+				jogadores = criacaoJogadores(path,sc,nomeDoTime);
+				jogadores.get("Pedro Gabriel").getFuncao();
+				
+				if(times.get(nomeDoTime) == null) {
+					System.out.println(nomeDoTime);
+					Time time = new Time(nomeDoTime,jogadores,nomeDoEstadio);
+					time.getNomeTime();
+					times.put(nomeDoTime,time);
+				}else {
+					System.out.println("Esse time já existe crie outro");
+				}
+				
+				i++;
+			}
+			
+			if("PRIMEIRA DIVISAO".equals(tipoCampeonato)) {
+				tipoCampeonato = tipoCampeonato.substring(0, 8) + '_'+ tipoCampeonato.substring(8 + 1);
+				System.out.println(tipoCampeonato);
+				campeonato = new Campeonato(numquipes, tipoCampeonato,times);
+				times.get("SAO PAULO").getNomeTime();
+			}
+			
+			System.out.println("Quer criar outro campeonato: Sim ou Nao");
+			opcao = sc.nextLine();
+			opcao = opcao.toLowerCase();
+		} while (opcao.equals("sim"));
+		
+		
+		sc.close();
 	}
 	
-	public static void arrayJogadores(Jogador[] teste1, Scanner sc,String time) {
-		String[] jogadores = new String[22];
-		System.out.println("Digite os nomes dos jogadores: ");
-		for(int i = 0;i < 22;i++) {
-			jogadores[i] = sc.next();
+	public static Map<String, Jogador> criacaoJogadores(String path, Scanner sc,String nomeDoTime) {
+		Map<String, Jogador> jogadores = new HashMap<String,Jogador>();
+		try(BufferedReader arquvo = new BufferedReader(new FileReader(path))){
+			
+			String linha = arquvo.readLine();
+			while(linha != null) {
+				
+				Jogador jogador;
+				String[] separacao = linha.split(",");
+				String nome = separacao[0];
+				separacao[1] = separacao[1].toUpperCase();
+				String funcao = separacao[1];
+				separacao[2] =  separacao[2].toUpperCase();
+				String timeEmQueJoga = separacao[2];
+				separacao[3] = separacao[3].toUpperCase();
+				String statusNaEquipe = separacao[3];
+			
+				if(nomeDoTime.equals(timeEmQueJoga)) {
+					if(jogadores.get(nome) == null) {
+						jogador = new Jogador(nome, funcao, timeEmQueJoga, statusNaEquipe);
+						jogadores.put(nome,jogador);
+					}else {
+						System.out.println("Ja existe um jogador com esse nome: "
+											+ "\nDigite o sbrenome dele");
+						String sobrenome = sc.nextLine();
+						nome = nome +" "+sobrenome;
+						jogador = new Jogador(nome, funcao, timeEmQueJoga, statusNaEquipe);
+						jogadores.put(nome,jogador);
+					}
+				}
+				
+				linha = arquvo.readLine();				
+				
+			}
+		} catch (IOException e) {
+			System.out.println("Error: "+e.getMessage());			
 		}
-		teste1[0] = new Jogador(jogadores[0], "Goleiro", time, "IMPORTANTE");
-		teste1[1] = new Jogador(jogadores[1], "Goleiro", time, "ROTATIVO");
-		teste1[2] = new Jogador(jogadores[2],"Lateral-Esquerdo",time,"IMPORTANTE");
-		teste1[3] = new Jogador(jogadores[3],"Lateral-Esquerdo",time,"ROTATIVO");
-		teste1[4] = new Jogador(jogadores[4],"Lateral-Direito",time,"IMPORTANTE");
-		teste1[5] = new Jogador(jogadores[5],"Lateral-Direito",time,"ROTATIVO");
-		teste1[6] = new Jogador(jogadores[6],"Zagueiro",time,"IMPORTANTE");
-		teste1[7] = new Jogador(jogadores[7],"Zagueiro",time,"ROTATIVO");
-		teste1[8] = new Jogador(jogadores[8],"Zagueiro",time,"IMPORTANTE");
-		teste1[9] = new Jogador(jogadores[9],"Zagueiro",time,"ROTATIVO");
-		teste1[10] = new Jogador(jogadores[10],"Meia",time,"IMPORTANTE");
-		teste1[11] = new Jogador(jogadores[11],"Meia",time,"ROTATIVO");
-		teste1[12] = new Jogador(jogadores[12],"Meia",time,"IMPORTANTE");
-		teste1[13] = new Jogador(jogadores[13],"Meia",time,"ROTATIVO");
-		teste1[14] = new Jogador(jogadores[14],"Meia",time,"IMPORTANTE");
-		teste1[15] = new Jogador(jogadores[15],"Meia",time,"ROTATIVO");
-		teste1[16] = new Jogador(jogadores[16],"Atacante",time,"IMPORTANTE");
-		teste1[17] = new Jogador(jogadores[17],"Atacante",time,"ROTATIVO");
-		teste1[18] = new Jogador(jogadores[18],"Atacante",time,"IMPORTANTE");
-		teste1[19] = new Jogador(jogadores[19],"Atacante",time,"ROTATIVO");
-		teste1[20] = new Jogador(jogadores[20],"Atacante",time,"IMPORTANTE");
-		teste1[21] = new Jogador(jogadores[21],"Atacante",time,"ROTATIVO");
+		return jogadores;
 	}
+	
+	private static void clearBuffer(Scanner scanner) {
+        if (scanner.hasNextLine()) {
+            scanner.nextLine();
+        }
+    }
 
 }
