@@ -1,20 +1,23 @@
 package br.edu.ifg;
 import java.util.Calendar;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Jogo {
 	private Time timeCasa;
 	private Time timeVisitante;
+	private Arbitro arbitro;
 	private String vencedor;
 	private int golsTimeCasa;
 	private int golsTimeVisitante;
-	private Calendar dataJogo;
-	private Calendar horario;
+	private String dataJogo;
+	private String horario;
 	private String local;
 	
-	public Jogo(Time timeCasa,Time timeVisitante) {
+	public Jogo(Time timeCasa,Time timeVisitante,Arbitro arbitro) {
 		this.timeCasa = timeCasa;
 		this.timeVisitante = timeVisitante;
+		this.arbitro = arbitro;
 		this.local = timeCasa.getNomeDoEstadio();
 	}
 	
@@ -94,6 +97,29 @@ public class Jogo {
 			timeVisitante.somarGolsTomados(this.getGolsTimeCasa());
 		}
 	}
+	
+	public void definirHorarioJogo(Scanner sc) {
+		String dia;
+		String mes;
+		String ano = "2022";
+		String hora;
+		String dataJogo;
+		
+		System.out.println("Digite o dia do jogo:");
+		dia = sc.nextLine();
+		
+		System.out.println("Digite o mes do jogo:");
+		mes = sc.nextLine();
+		
+		System.out.println("Digite a hora do jogo:");
+		hora = sc.nextLine();
+		
+		hora = hora+":00";
+		
+		dataJogo = dia +"/"+mes+"/"+ano;
+		this.setDataJogo(dataJogo);
+		this.setHorario(hora);
+	}
 
 	public Time getTimeCasa() {
 		return timeCasa;
@@ -135,19 +161,19 @@ public class Jogo {
 		this.golsTimeVisitante = golsTimeVisitante;
 	}
 
-	public Calendar getDataJogo() {
+	public String getDataJogo() {
 		return dataJogo;
 	}
 
-	public void setDataJogo(Calendar dataJogo) {
+	public void setDataJogo(String dataJogo) {
 		this.dataJogo = dataJogo;
 	}
 
-	public Calendar getHorario() {
+	public String getHorario() {
 		return horario;
 	}
 
-	public void setHorario(Calendar horario) {
+	public void setHorario(String horario) {
 		this.horario = horario;
 	}
 
@@ -158,4 +184,13 @@ public class Jogo {
 	public void setLocal(String local) {
 		this.local = local;
 	}
+
+	public Arbitro getArbitro() {
+		return arbitro;
+	}
+
+	public void setArbitro(Arbitro arbitro) {
+		this.arbitro = arbitro;
+	}
+	
 }

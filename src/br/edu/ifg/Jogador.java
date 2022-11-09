@@ -16,8 +16,8 @@ public class Jogador extends Pessoa{
 		case IMPORTANTE:
 			this.tipoJogador = "Importante";
 			break;
-		case ROTATIVO:
-			this.tipoJogador = "Rotativo";
+		case RESERVA:
+			this.tipoJogador = "Reserva";
 			break;
 		}
 	}

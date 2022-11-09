@@ -1,12 +1,14 @@
 package br.edu.ifg;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
 public class Time {
 	private String nomeTime;
-	private Map<String, Jogador> jogadores = new HashMap<String,Jogador>();
+	private Map<String, Jogador> jogadores = new HashMap<>();
 	private String nomeDoEstadio;
+	private Tecnico tecnico;
 	private int pontuacaoTimeCampeonato;
 	private int quantGolsFeitos;
 	private int quantGolsTomados;
@@ -17,10 +19,12 @@ public class Time {
 	
 	public Time(String nomeTime,
 			Map<String, Jogador> jogadores,
-				String nomeDoEstadio) {
+				String nomeDoEstadio,
+				Tecnico tecnico) {
 		this.nomeTime = nomeTime;
 		this.jogadores = jogadores;
 		this.nomeDoEstadio = nomeDoEstadio;
+		this.tecnico = tecnico;
 		this.pontuacaoTimeCampeonato = 0;
 		this.numDerrota = 0;
 		this.numEmpate = 0;
@@ -60,155 +64,142 @@ public class Time {
 		this.setSaldoDeGols(saldoGol);
  	}
 	
-	public void exibirEscalacao() {
-		int count = 1;
-		Map<String,Jogador> jogadores = this.jogadores;
-		Random aleatorio = new Random();
-		for(int i = 0;i<11;i++) {
-			int num = aleatorio.nextInt(3);
-			for (String key : jogadores.keySet()) {
-				if((num > 2 && count == 1) 
-					&& (jogadores.get(key).getTipoJogador() == "Importante"
-					&& jogadores.get(key).getFuncao() == "GOLEIRO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 1) 
-					&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-					&& jogadores.get(key).getFuncao() == "GOLEIRO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 2) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "LATERAL-DIREITO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 2) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "LATERAL-DIREITO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 3) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "ZAGUEIRO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 3) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "ZAGUEIRO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 4) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "ZAGUEIRO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 4) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "ZAGUEIRO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 5) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "LATERAL-ESQUERDO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 5) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "LATERAL-ESQUERDO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 6) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "MEIO DE CAMPO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 6) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "MEIO DE CAMPO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 7) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "MEIO DE CAMPO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 7) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "MEIO DE CAMPO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 8) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "MEIO DE CAMPO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 8) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "MEIO DE CAMPO")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 9) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "ATACANTE")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 9) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "ATACANTE")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 10) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "ATACANTE")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 10) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "ATACANTE")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num > 2 && count == 11) 
-						&& (jogadores.get(key).getTipoJogador() == "Importante" 
-						&& jogadores.get(key).getFuncao() == "ATACANTE")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-				if((num == 2 && count == 11) 
-						&& (jogadores.get(key).getTipoJogador() == "Rotativo" 
-						&& jogadores.get(key).getFuncao() == "ATACANTE")) {
-					
-					System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
-				}
-			}
-			count++;
-		}
-		
-	}
-	
 	public void calcularPontuacao() {
 		int pontuacao;
 		pontuacao = (this.getNumVitoria() * 3) + this.getNumEmpate();
 		this.setPontuacaoTimeCampeonato(pontuacao);
+	}
+	
+	public void exibirEscalacao() {
+		int count = 1;
+		Random aleatorio = new Random();
+		String zagueiro = "";
+		ArrayList<String> meioCampo = new ArrayList<String>();
+		ArrayList<String> ataque = new ArrayList<String>();
+		Map<String,Jogador> jogadores = this.jogadores;
+			for (String key : jogadores.keySet()) {
+				System.out.println(jogadores.get(key).getNome());
+				count++;
+				if(count == 12) {
+					break;
+				}
+			}
+			/*int num = aleatorio.nextInt(3);
+			for (String key : jogadores.keySet()) {
+				
+				if(count == 1 && jogadores.get(key).getFuncao().equals("GOLEIRO")) {
+					//System.out.println("Entrei aqui");
+					if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+						System.out.println(jogadores.get(key).getNome());
+					}
+					if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+						System.out.println(jogadores.get(key).getNome());
+					}
+				}
+				if((count == 2) && jogadores.get(key).getFuncao().equals("LATERAL-DIREITO")) {
+					if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+						System.out.println(jogadores.get(key).getNome());
+					}
+					if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+						System.out.println(jogadores.get(key).getNome());
+					}
+				
+				}
+				if((count == 3 || count == 4)&& jogadores.get(key).getFuncao().equals("ZAGUEIRO")) {
+					//System.out.println(count);
+					//System.out.println(chave);
+					if(zagueiro.equals("")) {
+						if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+							System.out.println(jogadores.get(key).getNome());
+							zagueiro = key;
+							
+						}
+						if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+							System.out.println(jogadores.get(key).getFuncao()+" "+jogadores.get(key).getNome());
+							zagueiro = key;
+						}
+					}else if(!key.equals(zagueiro) && count == 4){
+						if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+							System.out.println(jogadores.get(key).getNome());
+							
+						}
+						if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+							System.out.println(jogadores.get(key).getNome());
+							
+						}
+					}
+					
+				}
+				if(count == 5 && jogadores.get(key).getFuncao() == "LATERAL-ESQUERDO") {
+					if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+						System.out.println(jogadores.get(key).getNome());
+					}
+					if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+						System.out.println(jogadores.get(key).getNome());
+					}
+				}
+				if((count >= 6 && count > 9 ) && jogadores.get(key).getFuncao() == "MEIO DE CAMPO") {
+					if(meioCampo.isEmpty()) {
+						if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+							System.out.println(jogadores.get(key).getNome());
+							meioCampo.add(key);
+							
+						}
+						if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+							System.out.println(jogadores.get(key).getNome());
+							meioCampo.add(key);
+						}
+					}else if(!key.equals(meioCampo.get(0)) && count > 6){
+						if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+							System.out.println(jogadores.get(key).getNome());
+							meioCampo.add(key);
+						}
+						if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+							System.out.println(jogadores.get(key).getNome());
+							meioCampo.add(key);
+						}
+					}else if((!key.equals(meioCampo.get(1)) && !key.equals(meioCampo.get(0))) && count>6){
+						if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+							System.out.println(jogadores.get(key).getNome());
+						}
+						if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+							System.out.println(jogadores.get(key).getNome());
+						}
+					}
+				}
+				if((count >= 9 && count >= 11 ) && jogadores.get(key).getFuncao() == "ATACANTE") {
+					if(ataque.isEmpty()) {
+						if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+							System.out.println(jogadores.get(key).getNome());
+							ataque.add(key);
+							
+						}
+						if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+							System.out.println(jogadores.get(key).getNome());
+							ataque.add(key);
+						}
+					}else if(!key.equals(ataque.get(0)) && count > 6){
+						if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+							System.out.println(jogadores.get(key).getNome());
+							ataque.add(key);
+						}
+						if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+							System.out.println(jogadores.get(key).getNome());
+							ataque.add(key);
+						}
+					}else if((!key.equals(ataque.get(1)) && !key.equals(ataque.get(0))) && count>6){
+						if(num < 2 && jogadores.get(key).getTipoJogador().equals("Importante")) {
+							System.out.println(jogadores.get(key).getNome());
+						}
+						if(num == 2 && jogadores.get(key).getTipoJogador().equals("Reserva")) {
+							System.out.println(jogadores.get(key).getNome());
+						}
+					}
+				}
+				
+			}*/
+			
+		
 	}
 
 	/*
@@ -294,4 +285,11 @@ public class Time {
 		this.numEmpate = numEmpate;
 	}
 
+	public Tecnico getTecnico() {
+		return tecnico;
+	}
+
+	public void setTecnico(Tecnico tecnico) {
+		this.tecnico = tecnico;
+	}
 }

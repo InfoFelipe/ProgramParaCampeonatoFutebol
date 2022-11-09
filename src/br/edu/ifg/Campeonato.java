@@ -2,8 +2,8 @@ package br.edu.ifg;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Campeonato {
 	private int quantTotalRodadas;
@@ -41,102 +41,101 @@ public class Campeonato {
 		this.setQuantTotalRodadas(totalRodadas);
 	}
 	
-	public void definirCalendarioDePartidas(ArrayList<Time> times) {
-		
+	public Map<Integer,Rodada> definirCalendarioDePartidas(Scanner sc) {
+		Map<String,Time> times = this.getTimes();
+		Map<Integer,Rodada> rodadas = new HashMap<>();
 		int numRodada = 1;
-		int z = 1;
-		int count = 1;
-		int y = 0;
-		ArrayList<Integer> indices = new ArrayList<Integer>();
-		Map<Integer,ArrayList<Jogo>> rodadas = new LinkedHashMap<>();
-		Map<String,Time> timesCampeonato = new HashMap<>();
-		System.out.println(times.size());
-		for(int u=0;u<times.size();u++) {
-			timesCampeonato.put(times.get(u).getNomeTime(), times.get(u));
-		}
-		for (String key : timesCampeonato.keySet()) {
-			System.out.println(key+": "+timesCampeonato.get(key).getNomeDoEstadio());
-		}
-		System.out.println(this.getQuantTotalRodadas());
-		for(int i =0;i<this.getQuantTotalRodadas();i++) {
-			ArrayList<Jogo> jogo = new ArrayList<Jogo>();
-			for (int j=0;j<this.getNumTotalEquipes()/2;j++) {
-				Jogo partida;
-				if(y>=times.size()) {
-					y = 0;
-				}
-				if(numRodada == 1) {
-					if(y == 1 || y == 3) {
-						y++;
-					}
-					if(y%2==0) {
-						partida = new Jogo(times.get(y),times.get(z));
-						jogo.add(partida);
-						z += 2;
-					}
-					
-					
-				}
-				if(numRodada >= 2 && numRodada<=this.getQuantTotalRodadas()/2) {
-					if(z>=times.size()) {
-						z = times.size()-1;
-					}
-					if(z == 0) {
-						z = times.size()-1;
-					}
-					if(y == 5) {
-						y=0;
-					}
-					if(y == times.size()/2 - 1 && numRodada>1) {
-						partida = new Jogo(times.get(z),times.get(y));
-						jogo.add(partida);
-					}else if(z == times.size()-1 && numRodada>2) {
-						partida = new Jogo(times.get(z),times.get(0));
-						jogo.add(partida);
-					}else {
-						partida = new Jogo(times.get(y),times.get(z));
-						jogo.add(partida);
-					}
-					z--;
-					
-				}
-				if(numRodada == this.getQuantTotalRodadas()/2 +1) {
-					if(z>=times.size()) {
-						z = times.size()-1;
-					}
-					if(z != 1) {
-						z = 1;
-					}
-					partida = new Jogo(times.get(z),times.get(y));
-					jogo.add(partida);
-					z += 2;
-				}
-				y++;
+		int i = 0;
+		int numJogosRodada;
+		numJogosRodada = this.getNumTotalEquipes()/2;
+		
+		while(numRodada <= this.getQuantTotalRodadas()) {
+			Map<Integer,Jogo> jogosDaRodada = new HashMap<>();
+			
+			while(i < numJogosRodada) {
+				String nomeTimeCasa;
+				String nomeTimeVisitante;
+				String nomeArbitro;
+				Arbitro arbitro;
+				Time timeCasa;
+				Time timeVisitante;
+				Jogo jogo;
 				
+				System.out.println("Digite o time da casa do "+(i+1)+" jogo da "+numRodada+" rodada");
+				nomeTimeCasa = sc.nextLine();
+				nomeTimeCasa = nomeTimeCasa.toUpperCase();
+				
+				System.out.println("Digite o time visitante do "+(i+1)+" jogo da "+numRodada+" rodada");
+				nomeTimeVisitante = sc.nextLine();
+				nomeTimeVisitante = nomeTimeVisitante.toUpperCase();
+				
+				timeCasa = times.get(nomeTimeCasa);
+				timeVisitante = times.get(nomeTimeVisitante);
+				
+				System.out.println("Digite o nome do arbitro da partida:");
+				nomeArbitro = sc.nextLine();
+				arbitro = new Arbitro(nomeArbitro,"Arbitro");
+				
+				jogo = new Jogo(timeCasa, timeVisitante, arbitro);
+				jogo.definirHorarioJogo(sc);
+				jogosDaRodada.put(i,jogo);
+				
+				i++;
 			}
-			rodadas.put(numRodada,jogo);
+			Rodada rodada = new Rodada(jogosDaRodada,numRodada);
+			rodadas.put(numRodada, rodada);
+			numJogosRodada = this.getNumTotalEquipes()/2;
+			i=0;
 			numRodada++;
 		}
-		for (Integer key : rodadas.keySet()) {
-			for(int l=0;l<rodadas.get(key).size();l++) {
-				System.out.println(key+": "+rodadas.get(key).get(l).getTimeCasa().getNomeTime()+" X "+rodadas.get(key).get(l).getTimeVisitante().getNomeTime());
-			}
-		}
+		return rodadas;
     }
 		
 	
-	public void exibirTabela(ArrayList<Time> times) {
-		for (Time time : times) {
+	public void exibirTabela() {
+		ArrayList<Time> times = new ArrayList<Time>();
+		for(String nomeTime : this.getTimes().keySet()) {
+			times.add(this.getTimes().get(nomeTime));
+		}
+		for(int i=0;i<times.size()-1;i++) {
+				if(times.get(i).getPontuacaoTimeCampeonato() < times.get(i+1).getPontuacaoTimeCampeonato()) {
+					Time time2 = times.get(i+1);
+					times.remove(i+1);
+					times.add(i,time2);
+				}else if(times.get(i).getPontuacaoTimeCampeonato() == times.get(i+1).getPontuacaoTimeCampeonato()) {
+					if(times.get(i).getSaldoDeGols() < times.get(i+1).getSaldoDeGols()) {
+						Time time2 = times.get(i+1);
+						times.remove(i+1);
+						times.add(i, time2);
+					}
+					if(times.get(i).getSaldoDeGols() == times.get(i+1).getSaldoDeGols()) {
+						if(times.get(i).getNumVitoria() < times.get(i+1).getNumVitoria()) {
+							Time time2 = times.get(i+1);
+							times.remove(i+1);
+							times.add(i, time2);
+						}
+					}
+				}
 			
 		}
+		System.out.printf("Times \t\t\t PT | V | D | E | GF | GT | SG\n");
+		for(int i=0;i<times.size();i++) {
+			System.out.println(times.get(i).getNomeTime()+" \t\t "+times.get(i).getPontuacaoTimeCampeonato()+"  | "
+								+times.get(i).getNumVitoria()+" | "+times.get(i).getNumDerrota()+" | "
+								+times.get(i).getNumEmpate()+" | "+times.get(i).getQuantGolsFeitos()+"  | "
+								+times.get(i).getQuantGolsTomados()+"  | "+times.get(i).getSaldoDeGols());
+		}
+		int totalRodadas = times.get(0).getNumVitoria()+times.get(0).getNumDerrota()+times.get(0).getNumEmpate();
 		
-		for (Time time : times) {
-			System.out.println(time.getNomeTime()+" | "+time.getPontuacaoTimeCampeonato()+" | "+time.getNumVitoria()+" | "+time.getNumEmpate()+" | "+time.getNumDerrota()+" | "+time.getSaldoDeGols());
+		if(totalRodadas == this.getQuantTotalRodadas()) {
+			this.setVencedorDoCampeonato(times.get(0).getNomeTime());
+			System.out.println("O campeao do(a) "+this.getTipoCampeonato()+" foi:");
+			System.out.printf("\t\t %s \t\t",this.getVencedorDoCampeonato());
 		}
 	}
 	
 	public void mostrarCampeao() {
-		//Falta a implementação 
+		this.exibirTabela();
 	}
 	
 	public int getQuantTotalRodadas() {

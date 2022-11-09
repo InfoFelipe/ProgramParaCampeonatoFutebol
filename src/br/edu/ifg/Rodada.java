@@ -1,12 +1,12 @@
 package br.edu.ifg;
 
-import java.util.ArrayList;
+import java.util.Map;
 
 public class Rodada {
 	private int numRodada;
-	private ArrayList<Jogo> jogosDaRodada;
+	private Map<Integer,Jogo> jogosDaRodada;
 	
-	public Rodada(ArrayList<Jogo> jogosDaRodada,int numRodada) {
+	public Rodada(Map<Integer,Jogo> jogosDaRodada,int numRodada) {
 		this.jogosDaRodada = jogosDaRodada;
 		this.numRodada = numRodada;
 	}
@@ -19,11 +19,11 @@ public class Rodada {
 		this.numRodada = numRodada;
 	}
 
-	public ArrayList<Jogo> getJogosDaRodada() {
+	public Map<Integer,Jogo> getJogosDaRodada() {
 		return jogosDaRodada;
 	}
 
-	public void setJogosDaRodada(ArrayList<Jogo> jogosDaRodada) {
+	public void setJogosDaRodada(Map<Integer,Jogo> jogosDaRodada) {
 		this.jogosDaRodada = jogosDaRodada;
 	}
 }

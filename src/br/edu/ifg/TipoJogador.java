@@ -2,5 +2,5 @@ package br.edu.ifg;
 
 public enum TipoJogador {
 	IMPORTANTE,
-	ROTATIVO;
+	RESERVA;
 }
