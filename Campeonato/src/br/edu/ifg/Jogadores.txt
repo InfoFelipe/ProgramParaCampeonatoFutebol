@@ -1,0 +1,477 @@
+Luiz Gustavo Jesus,Goleiro,importante
+Benício Freitas,Goleiro,reserva
+Nicolas Cavalcanti,lateral-direito,importante
+Cauã Nascimento,lateral-direito,reserva
+Murilo Peixoto,zagueiro,importante
+Vitor Gabriel Mendes,zagueiro,importante
+Ryan Aragão,zagueiro,reserva
+Davi da Paz,zagueiro,reserva
+João Felipe Oliveira,lateral-esquerdo,reserva
+Caio Pinto,lateral-esquerdo,importante
+Ian Viana,Meio de campo,importante
+Enzo Gabriel Cardoso,Meio de campo,reserva
+Enzo Gabriel Costela,Meio de campo,importante
+Pedro Miguel Teixeira,Meio de campo,reserva
+Rodrigo Nascimento,Meio de campo,importante
+Paulo Rezende,Meio de campo,reserva
+Erick Melo,Atacante,importante
+Ian Santos,ATACANTE,reserva
+Isaac Costa,ATACANTE,importante
+Davi Castro,ATACANTE,reserva
+André Oliveira,ATACANTE,importante
+Theo Nogueira,ATACANTE,reserva
+Bernardo Viana,Goleiro,importante
+Igor Moraes,Goleiro,reserva
+Luiz Henrique Pires,lateral-direito,importante
+Ryan Moraes,lateral-direito,reserva
+André Rodrigues,zagueiro,importante
+Yuri Rodrigues,zagueiro,reserva
+Heitor da Mota,zagueiro,importante
+Bryan Ribeiro,zagueiro,reserva
+Luiz Otávio Souza,lateral-esquerdo,importante
+Davi Lucca Nascimento,lateral-esquerdo,importante
+Cauê Pinto,Meio de campo,importante
+Rodrigo Freitas,Meio de campo,importante
+Vicente Castro,Meio de campo,importante
+Enrico da Rosa,Meio de campo,reserva
+Marcelo da Rosa,Meio de campo,reserva
+Arthur Cavalcanti,Meio de campo,reserva
+Bernardo Caldeira,ATACANTE,importante
+Pedro Miguel Gomes,ATACANTE,importante
+Matheus Pereira,ATACANTE,importante
+Emanuel Cardoso,ATACANTE,reserva
+Isaac Pinto,ATACANTE,reserva
+Yuri Costela,ATACANTE,reserva
+Nicolas da Cruz,Goleiro,reserva
+Ryan Lima,Goleiro,importante
+Carlos Eduardo Fogaça,lateral-direito,importante
+Isaac Silva,lateral-direito,reserva
+Enrico Lopes,zagueiro,importante
+Carlos Eduardo Barros,zagueiro,reserva
+Calebe Porto,zagueiro,importante
+Yuri Cardoso,zagueiro,reserva
+Kaique Ferreira,lateral-esquerdo,importante
+Gustavo Teixeira,lateral-esquerdo,reserva
+Gustavo Rodrigues,Meio de campo,importante
+Daniel Cavalcanti,Meio de campo,reserva
+Enrico Aragão,Meio de campo,reserva
+Heitor Ferreira,Meio de campo,importante
+Gustavo Henrique da Luz,Meio de campo,importante
+Vitor Gabriel Nascimento,Meio de campo,reserva
+Gustavo Correia,ATACANTE,reserva
+Raul Rocha,ATACANTE,importante
+Emanuel Almeida,ATACANTE,reserva
+João Gabriel Porto,ATACANTE,reserva
+Felipe Ribeiro,ATACANTE,importante
+Pedro Lucas Vieira,ATACANTE,importante
+Luiz Felipe Novaes,Goleiro,importante
+Enrico Campos,Goleiro,reserva
+João Felipe Araújo,lateral-direito,importante
+Thiago Costa,lateral-direito,reserva
+Lucas Almeida,lateral-esquerdo,reserva
+João Felipe Lopes,lateral-esquerdo,importante
+André Mendes,zagueiro,reserva
+Cauã Sales,Igor Ribeiro,zagueiro,importante
+Arthur Monteiro,zagueiro,reserva
+João Lucas das Neves,zagueiro,importante
+Cauã Nunes,zagueiro,reserva
+Luiz Henrique da Conceição,zagueiro,importante
+Raul da Rocha,Meio de campo,reserva
+Nathan Jesus,Meio de campo,importante
+Raul Nascimento,Meio de campo,importante
+Matheus Rocha,Meio de campo,reserva
+Pedro Henrique Gomes,Meio de campo,importante
+Bernardo Novaes,Meio de campo,reserva
+Noah Castro,ATACANTE,importante
+Joaquim Caldeira,ATACANTE,reserva
+Daniel Cavalcanti,ATACANTE,reserva
+Calebe Ramos,ATACANTE,importante
+Rafael Fernandes,ATACANTE,importante
+Luigi da Conceição,ATACANTE,reserva
+Pedro Lucas Lopes,Goleiro,reserva
+Theo Lima,Goleiro,importante
+Carlos Eduardo Aragão,lateral-direito,importante
+Vitor Gabriel Silveira,lateral-direito,reserva
+Nicolas da Rosa,lateral-esquerdo,importante
+Samuel da Costa,lateral-esquerdo,reserva
+Eduardo Cardoso,zagueiro,importante
+Lucca Lopes,Noah Freitas,zagueiro,importante
+Daniel Souza,zagueiro,reserva
+Juan Novaes,João Guilherme Ferreira,zagueiro,importante
+Juan Moreira,zagueiro,reserva
+Renan Costa,zagueiro,reserva
+Lucca Castro,Meio de campo,reserva
+Rodrigo Rodrigues,Meio de campo,reserva
+João Vitor Barbosa,Meio de campo,reserva
+Diego da Costa,Meio de campo,importante
+Anthony da Mota,Meio de campo,importante
+Marcos Vinicius da Paz,Meio de campo,importante
+Lorenzo da Mota,ATACANTE,importante
+Daniel Sales,ATACANTE,importante
+Daniel da Cruz,ATACANTE,reserva
+Luigi Dias,ATACANTE,importante
+João Costela,ATACANTE,reserva
+Lucas Cavalcanti,ATACANTE,reserva
+Pedro Gabriel,Zagueiro,importante
+Felipe Antonio,Goleiro,importante
+Devid,Goleiro,reserva
+Luis Fernando,Zagueiro,importante
+Davi Ian Moreira,Zagueiro,reserva
+Jorge,Lateral-direito,reserva
+Joao,Lateral-direito,importante
+Luiz Gustavo Jesus,Goleiro,importante
+Benício Freitas,Goleiro,reserva
+Nicolas Cavalcanti,lateral-direito,importante
+Cauã Nascimento,lateral-direito,reserva
+Murilo Peixoto,zagueiro,importante
+Vitor Gabriel Mendes,zagueiro,importante
+Ryan Aragão,zagueiro,reserva
+Davi da Paz,zagueiro,reserva
+João Felipe Oliveira,lateral-esquerdo,reserva
+Caio Pinto,lateral-esquerdo,importante
+Ian Viana,Meio de campo,importante
+Enzo Gabriel Cardoso,Meio de campo,reserva
+Enzo Gabriel Costela,Meio de campo,importante
+Pedro Miguel Teixeira,Meio de campo,reserva
+Rodrigo Nascimento,Meio de campo,importante
+Paulo Rezende,Meio de campo,reserva
+Erick Melo,Atacante,importante
+Ian Santos,ATACANTE,reserva
+Isaac Costa,ATACANTE,importante
+Davi Castro,ATACANTE,reserva
+André Oliveira,ATACANTE,importante
+Theo Nogueira,ATACANTE,reserva
+Bernardo Viana,Goleiro,importante
+Igor Moraes,Goleiro,reserva
+Luiz Henrique Pires,lateral-direito,importante
+Ryan Moraes,lateral-direito,reserva
+André Rodrigues,zagueiro,importante
+Yuri Rodrigues,zagueiro,reserva
+Heitor da Mota,zagueiro,importante
+Bryan Ribeiro,zagueiro,reserva
+Luiz Otávio Souza,lateral-esquerdo,importante
+Davi Lucca Nascimento,lateral-esquerdo,importante
+Cauê Pinto,Meio de campo,importante
+Rodrigo Freitas,Meio de campo,importante
+Vicente Castro,Meio de campo,importante
+Enrico da Rosa,Meio de campo,reserva
+Marcelo da Rosa,Meio de campo,reserva
+Arthur Cavalcanti,Meio de campo,reserva
+Bernardo Caldeira,ATACANTE,importante
+Pedro Miguel Gomes,ATACANTE,importante
+Matheus Pereira,ATACANTE,importante
+Emanuel Cardoso,ATACANTE,reserva
+Isaac Pinto,ATACANTE,reserva
+Yuri Costela,ATACANTE,reserva
+Nicolas da Cruz,Goleiro,reserva
+Ryan Lima,Goleiro,importante
+Carlos Eduardo Fogaça,lateral-direito,importante
+Isaac Silva,lateral-direito,reserva
+Enrico Lopes,zagueiro,importante
+Carlos Eduardo Barros,zagueiro,reserva
+Calebe Porto,zagueiro,importante
+Yuri Cardoso,zagueiro,reserva
+Kaique Ferreira,lateral-esquerdo,importante
+Gustavo Teixeira,lateral-esquerdo,reserva
+Gustavo Rodrigues,Meio de campo,importante
+Daniel Cavalcanti,Meio de campo,reserva
+Enrico Aragão,Meio de campo,reserva
+Heitor Ferreira,Meio de campo,importante
+Gustavo Henrique da Luz,Meio de campo,importante
+Vitor Gabriel Nascimento,Meio de campo,reserva
+Gustavo Correia,ATACANTE,reserva
+Raul Rocha,ATACANTE,importante
+Emanuel Almeida,ATACANTE,reserva
+João Gabriel Porto,ATACANTE,reserva
+Felipe Ribeiro,ATACANTE,importante
+Pedro Lucas Vieira,ATACANTE,importante
+Luiz Felipe Novaes,Goleiro,importante
+Enrico Campos,Goleiro,reserva
+João Felipe Araújo,lateral-direito,importante
+Thiago Costa,lateral-direito,reserva
+Lucas Almeida,lateral-esquerdo,reserva
+João Felipe Lopes,lateral-esquerdo,importante
+André Mendes,zagueiro,reserva
+Cauã Sales,Igor Ribeiro,zagueiro,importante
+Arthur Monteiro,zagueiro,reserva
+João Lucas das Neves,zagueiro,importante
+Cauã Nunes,zagueiro,reserva
+Luiz Henrique da Conceição,zagueiro,importante
+Raul da Rocha,Meio de campo,reserva
+Nathan Jesus,Meio de campo,importante
+Raul Nascimento,Meio de campo,importante
+Matheus Rocha,Meio de campo,reserva
+Pedro Henrique Gomes,Meio de campo,importante
+Bernardo Novaes,Meio de campo,reserva
+Noah Castro,ATACANTE,importante
+Joaquim Caldeira,ATACANTE,reserva
+Daniel Cavalcanti,ATACANTE,reserva
+Calebe Ramos,ATACANTE,importante
+Rafael Fernandes,ATACANTE,importante
+Luigi da Conceição,ATACANTE,reserva
+Pedro Lucas Lopes,Goleiro,reserva
+Theo Lima,Goleiro,importante
+Carlos Eduardo Aragão,lateral-direito,importante
+Vitor Gabriel Silveira,lateral-direito,reserva
+Nicolas da Rosa,lateral-esquerdo,importante
+Samuel da Costa,lateral-esquerdo,reserva
+Eduardo Cardoso,zagueiro,importante
+Lucca Lopes,Noah Freitas,zagueiro,importante
+Daniel Souza,zagueiro,reserva
+Juan Novaes,João Guilherme Ferreira,zagueiro,importante
+Juan Moreira,zagueiro,reserva
+Renan Costa,zagueiro,reserva
+Lucca Castro,Meio de campo,reserva
+Rodrigo Rodrigues,Meio de campo,reserva
+João Vitor Barbosa,Meio de campo,reserva
+Diego da Costa,Meio de campo,importante
+Anthony da Mota,Meio de campo,importante
+Marcos Vinicius da Paz,Meio de campo,importante
+Lorenzo da Mota,ATACANTE,importante
+Daniel Sales,ATACANTE,importante
+Daniel da Cruz,ATACANTE,reserva
+Luigi Dias,ATACANTE,importante
+João Costela,ATACANTE,reserva
+Lucas Cavalcanti,ATACANTE,reserva
+Pedro Gabriel,Zagueiro,importante
+Felipe Antonio,Goleiro,importante
+Devid,Goleiro,reserva
+Luis Fernando,Zagueiro,importante
+Davi Ian Moreira,Zagueiro,reserva
+Jorge,Lateral-direito,reserva
+Joao,Lateral-direito,importante
+Luiz Gustavo Jesus,Goleiro,importante
+Benício Freitas,Goleiro,reserva
+Nicolas Cavalcanti,lateral-direito,importante
+Cauã Nascimento,lateral-direito,reserva
+Murilo Peixoto,zagueiro,importante
+Vitor Gabriel Mendes,zagueiro,importante
+Ryan Aragão,zagueiro,reserva
+Davi da Paz,zagueiro,reserva
+João Felipe Oliveira,lateral-esquerdo,reserva
+Caio Pinto,lateral-esquerdo,importante
+Ian Viana,Meio de campo,importante
+Enzo Gabriel Cardoso,Meio de campo,reserva
+Enzo Gabriel Costela,Meio de campo,importante
+Pedro Miguel Teixeira,Meio de campo,reserva
+Rodrigo Nascimento,Meio de campo,importante
+Paulo Rezende,Meio de campo,reserva
+Erick Melo,Atacante,importante
+Ian Santos,ATACANTE,reserva
+Isaac Costa,ATACANTE,importante
+Davi Castro,ATACANTE,reserva
+André Oliveira,ATACANTE,importante
+Theo Nogueira,ATACANTE,reserva
+Bernardo Viana,Goleiro,importante
+Igor Moraes,Goleiro,reserva
+Luiz Henrique Pires,lateral-direito,importante
+Ryan Moraes,lateral-direito,reserva
+André Rodrigues,zagueiro,importante
+Yuri Rodrigues,zagueiro,reserva
+Heitor da Mota,zagueiro,importante
+Bryan Ribeiro,zagueiro,reserva
+Luiz Otávio Souza,lateral-esquerdo,importante
+Davi Lucca Nascimento,lateral-esquerdo,importante
+Cauê Pinto,Meio de campo,importante
+Rodrigo Freitas,Meio de campo,importante
+Vicente Castro,Meio de campo,importante
+Enrico da Rosa,Meio de campo,reserva
+Marcelo da Rosa,Meio de campo,reserva
+Arthur Cavalcanti,Meio de campo,reserva
+Bernardo Caldeira,ATACANTE,importante
+Pedro Miguel Gomes,ATACANTE,importante
+Matheus Pereira,ATACANTE,importante
+Emanuel Cardoso,ATACANTE,reserva
+Isaac Pinto,ATACANTE,reserva
+Yuri Costela,ATACANTE,reserva
+Nicolas da Cruz,Goleiro,reserva
+Ryan Lima,Goleiro,importante
+Carlos Eduardo Fogaça,lateral-direito,importante
+Isaac Silva,lateral-direito,reserva
+Enrico Lopes,zagueiro,importante
+Carlos Eduardo Barros,zagueiro,reserva
+Calebe Porto,zagueiro,importante
+Yuri Cardoso,zagueiro,reserva
+Kaique Ferreira,lateral-esquerdo,importante
+Gustavo Teixeira,lateral-esquerdo,reserva
+Gustavo Rodrigues,Meio de campo,importante
+Daniel Cavalcanti,Meio de campo,reserva
+Enrico Aragão,Meio de campo,reserva
+Heitor Ferreira,Meio de campo,importante
+Gustavo Henrique da Luz,Meio de campo,importante
+Vitor Gabriel Nascimento,Meio de campo,reserva
+Gustavo Correia,ATACANTE,reserva
+Raul Rocha,ATACANTE,importante
+Emanuel Almeida,ATACANTE,reserva
+João Gabriel Porto,ATACANTE,reserva
+Felipe Ribeiro,ATACANTE,importante
+Pedro Lucas Vieira,ATACANTE,importante
+Luiz Felipe Novaes,Goleiro,importante
+Enrico Campos,Goleiro,reserva
+João Felipe Araújo,lateral-direito,importante
+Thiago Costa,lateral-direito,reserva
+Lucas Almeida,lateral-esquerdo,reserva
+João Felipe Lopes,lateral-esquerdo,importante
+André Mendes,zagueiro,reserva
+Cauã Sales,Igor Ribeiro,zagueiro,importante
+Arthur Monteiro,zagueiro,reserva
+João Lucas das Neves,zagueiro,importante
+Cauã Nunes,zagueiro,reserva
+Luiz Henrique da Conceição,zagueiro,importante
+Raul da Rocha,Meio de campo,reserva
+Nathan Jesus,Meio de campo,importante
+Raul Nascimento,Meio de campo,importante
+Matheus Rocha,Meio de campo,reserva
+Pedro Henrique Gomes,Meio de campo,importante
+Bernardo Novaes,Meio de campo,reserva
+Noah Castro,ATACANTE,importante
+Joaquim Caldeira,ATACANTE,reserva
+Daniel Cavalcanti,ATACANTE,reserva
+Calebe Ramos,ATACANTE,importante
+Rafael Fernandes,ATACANTE,importante
+Luigi da Conceição,ATACANTE,reserva
+Pedro Lucas Lopes,Goleiro,reserva
+Theo Lima,Goleiro,importante
+Carlos Eduardo Aragão,lateral-direito,importante
+Vitor Gabriel Silveira,lateral-direito,reserva
+Nicolas da Rosa,lateral-esquerdo,importante
+Samuel da Costa,lateral-esquerdo,reserva
+Eduardo Cardoso,zagueiro,importante
+Lucca Lopes,Noah Freitas,zagueiro,importante
+Daniel Souza,zagueiro,reserva
+Juan Novaes,João Guilherme Ferreira,zagueiro,importante
+Juan Moreira,zagueiro,reserva
+Renan Costa,zagueiro,reserva
+Lucca Castro,Meio de campo,reserva
+Rodrigo Rodrigues,Meio de campo,reserva
+João Vitor Barbosa,Meio de campo,reserva
+Diego da Costa,Meio de campo,importante
+Anthony da Mota,Meio de campo,importante
+Marcos Vinicius da Paz,Meio de campo,importante
+Lorenzo da Mota,ATACANTE,importante
+Daniel Sales,ATACANTE,importante
+Daniel da Cruz,ATACANTE,reserva
+Luigi Dias,ATACANTE,importante
+João Costela,ATACANTE,reserva
+Lucas Cavalcanti,ATACANTE,reserva
+Pedro Gabriel,Zagueiro,importante
+Felipe Antonio,Goleiro,importante
+Devid,Goleiro,reserva
+Luis Fernando,Zagueiro,importante
+Davi Ian Moreira,Zagueiro,reserva
+Jorge,Lateral-direito,reserva
+Joao,Lateral-direito,importante
+Luiz Gustavo Jesus,Goleiro,importante
+Benício Freitas,Goleiro,reserva
+Nicolas Cavalcanti,lateral-direito,importante
+Cauã Nascimento,lateral-direito,reserva
+Murilo Peixoto,zagueiro,importante
+Vitor Gabriel Mendes,zagueiro,importante
+Ryan Aragão,zagueiro,reserva
+Davi da Paz,zagueiro,reserva
+João Felipe Oliveira,lateral-esquerdo,reserva
+Caio Pinto,lateral-esquerdo,importante
+Ian Viana,Meio de campo,importante
+Enzo Gabriel Cardoso,Meio de campo,reserva
+Enzo Gabriel Costela,Meio de campo,importante
+Pedro Miguel Teixeira,Meio de campo,reserva
+Rodrigo Nascimento,Meio de campo,importante
+Paulo Rezende,Meio de campo,reserva
+Erick Melo,Atacante,importante
+Ian Santos,ATACANTE,reserva
+Isaac Costa,ATACANTE,importante
+Davi Castro,ATACANTE,reserva
+André Oliveira,ATACANTE,importante
+Theo Nogueira,ATACANTE,reserva
+Bernardo Viana,Goleiro,importante
+Igor Moraes,Goleiro,reserva
+Luiz Henrique Pires,lateral-direito,importante
+Ryan Moraes,lateral-direito,reserva
+André Rodrigues,zagueiro,importante
+Yuri Rodrigues,zagueiro,reserva
+Heitor da Mota,zagueiro,importante
+Bryan Ribeiro,zagueiro,reserva
+Luiz Otávio Souza,lateral-esquerdo,importante
+Davi Lucca Nascimento,lateral-esquerdo,importante
+Cauê Pinto,Meio de campo,importante
+Rodrigo Freitas,Meio de campo,importante
+Vicente Castro,Meio de campo,importante
+Enrico da Rosa,Meio de campo,reserva
+Marcelo da Rosa,Meio de campo,reserva
+Arthur Cavalcanti,Meio de campo,reserva
+Bernardo Caldeira,ATACANTE,importante
+Pedro Miguel Gomes,ATACANTE,importante
+Matheus Pereira,ATACANTE,importante
+Emanuel Cardoso,ATACANTE,reserva
+Isaac Pinto,ATACANTE,reserva
+Yuri Costela,ATACANTE,reserva
+Nicolas da Cruz,Goleiro,reserva
+Ryan Lima,Goleiro,importante
+Carlos Eduardo Fogaça,lateral-direito,importante
+Isaac Silva,lateral-direito,reserva
+Enrico Lopes,zagueiro,importante
+Carlos Eduardo Barros,zagueiro,reserva
+Calebe Porto,zagueiro,importante
+Yuri Cardoso,zagueiro,reserva
+Kaique Ferreira,lateral-esquerdo,importante
+Gustavo Teixeira,lateral-esquerdo,reserva
+Gustavo Rodrigues,Meio de campo,importante
+Daniel Cavalcanti,Meio de campo,reserva
+Enrico Aragão,Meio de campo,reserva
+Heitor Ferreira,Meio de campo,importante
+Gustavo Henrique da Luz,Meio de campo,importante
+Vitor Gabriel Nascimento,Meio de campo,reserva
+Gustavo Correia,ATACANTE,reserva
+Raul Rocha,ATACANTE,importante
+Emanuel Almeida,ATACANTE,reserva
+João Gabriel Porto,ATACANTE,reserva
+Felipe Ribeiro,ATACANTE,importante
+Pedro Lucas Vieira,ATACANTE,importante
+Luiz Felipe Novaes,Goleiro,importante
+Enrico Campos,Goleiro,reserva
+João Felipe Araújo,lateral-direito,importante
+Thiago Costa,lateral-direito,reserva
+Lucas Almeida,lateral-esquerdo,reserva
+João Felipe Lopes,lateral-esquerdo,importante
+André Mendes,zagueiro,reserva
+Cauã Sales,Igor Ribeiro,zagueiro,importante
+Arthur Monteiro,zagueiro,reserva
+João Lucas das Neves,zagueiro,importante
+Cauã Nunes,zagueiro,reserva
+Luiz Henrique da Conceição,zagueiro,importante
+Raul da Rocha,Meio de campo,reserva
+Nathan Jesus,Meio de campo,importante
+Raul Nascimento,Meio de campo,importante
+Matheus Rocha,Meio de campo,reserva
+Pedro Henrique Gomes,Meio de campo,importante
+Bernardo Novaes,Meio de campo,reserva
+Noah Castro,ATACANTE,importante
+Joaquim Caldeira,ATACANTE,reserva
+Daniel Cavalcanti,ATACANTE,reserva
+Calebe Ramos,ATACANTE,importante
+Rafael Fernandes,ATACANTE,importante
+Luigi da Conceição,ATACANTE,reserva
+Pedro Lucas Lopes,Goleiro,reserva
+Theo Lima,Goleiro,importante
+Carlos Eduardo Aragão,lateral-direito,importante
+Vitor Gabriel Silveira,lateral-direito,reserva
+Nicolas da Rosa,lateral-esquerdo,importante
+Samuel da Costa,lateral-esquerdo,reserva
+Eduardo Cardoso,zagueiro,importante
+Lucca Lopes,Noah Freitas,zagueiro,importante
+Daniel Souza,zagueiro,reserva
+Juan Novaes,João Guilherme Ferreira,zagueiro,importante
+Juan Moreira,zagueiro,reserva
+Renan Costa,zagueiro,reserva
+Lucca Castro,Meio de campo,reserva
+Rodrigo Rodrigues,Meio de campo,reserva
+João Vitor Barbosa,Meio de campo,reserva
+Diego da Costa,Meio de campo,importante
+Anthony da Mota,Meio de campo,importante
+Marcos Vinicius da Paz,Meio de campo,importante
+Lorenzo da Mota,ATACANTE,importante
+Daniel Sales,ATACANTE,importante
+Daniel da Cruz,ATACANTE,reserva
+Luigi Dias,ATACANTE,importante
+João Costela,ATACANTE,reserva
+Lucas Cavalcanti,ATACANTE,reserva
